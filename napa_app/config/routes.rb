@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'users#index'
-  resources :users
+  root to: 'pages#index'
+  resources :pages
+  resources :learn
+
+  
 end
