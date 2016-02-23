@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :infos
+	has_many :wines, through: :infos
 
   has_secure_password
 
