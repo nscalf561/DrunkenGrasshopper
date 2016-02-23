@@ -2,11 +2,9 @@ class User < ActiveRecord::Base
 	
   has_secure_password
 
-  # ensure emails are unique
-  validates :email, uniqueness: true 
-
-  def self.confirm(email_param, password_param)
-    user = User.find_by_email(email_param)
-    user.authenticate(password_param)
+  def self.confirm(params)
+    @user = User.find_by({username: params[:username]})
+    @user.try(:authenticate, params[:password])
   end
+
 end

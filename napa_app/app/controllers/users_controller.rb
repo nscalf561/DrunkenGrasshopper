@@ -1,38 +1,23 @@
 class UsersController < ApplicationController
 	# before_action :require_login
-
-	# def login
-
-	# end
-
-	def signup
+	def new
 		@user = User.new
-		render :signup
+		render :new
 	end
 
 	def create
-		user_params = params.require(:user).permit(:username, :preferences, :email, :password_digest)
-		@user = User.create(user_params)
-		# login(@user)
-		redirect_to "/users/account"
+		user_params = params.require(:user).permit(:username, :password)
+		user = User.new(user_params)
+		if user.save
+			session[:user_id] = user.id
+			redirect_to user_path(user)
+		else 
+			redirect_to "/login"
+		end
 	end
 
 	def show
-		# @user = User.find(params[:id])
-		render :account
+		@user = User.find(params[:id])
 	end
-
-	def account
-		# @user = User.find(params[:id])
-		render :account
-	end
-
-  # private
-
-  # def require_login
-  #   if !current_user
-  #     redirect_to root_path 
-  #   end
-  # end
 
 end
