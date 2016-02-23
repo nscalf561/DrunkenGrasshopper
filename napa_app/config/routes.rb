@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # post "/users/", to: "users#create"
   # get "/users/:id", to: "users#show"
+  get "/users/signup", to: "users#new"
   resources :users
 
   # get "/wines", to: "wines#index"
@@ -13,10 +14,11 @@ Rails.application.routes.draw do
   # get "/wines/:id", to: "wines#show"
   resources :wines
 
+  resources :infos
+
   #logs in a user
   get "/login", to: "sessions#new"
   #creates a new session for user logins
   post "/sessions", to: "sessions#create"
-
 
 end 

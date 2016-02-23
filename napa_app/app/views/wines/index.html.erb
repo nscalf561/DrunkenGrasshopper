@@ -1,1 +1,26 @@
-<h1>wines index page </h1>
+<% @wines.each do |wine| %>
+  <div>
+    <h3><%= wine.name %></h3>
+  </div>
+  <div>
+   	<h3><%= wine.vineyard %></h3>
+  </div>
+  <div>
+   	<h3><%= wine.year %></h3>
+  </div>
+  <div>
+   	<h3><%= wine.color %></h3>
+  </div>
+  <div>
+   	<h3><%= wine.notes %></h3>
+  </div>
+  <div>
+   	<h3><%= wine.link %></h3>
+  </div>
+  <br>
+<% end %>
+
+<!-- 
+This is the wine info in the database
+:vineyard, :year, :name, :color, :notes, :link
+-->

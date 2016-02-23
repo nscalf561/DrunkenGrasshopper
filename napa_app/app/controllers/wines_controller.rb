@@ -13,6 +13,7 @@ class WinesController < ApplicationController
 	end
 
 	def index
+		@wines = Wine.all
 		render :index
 	end
 
