@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223230238) do
+ActiveRecord::Schema.define(version: 20160224010946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,12 @@ ActiveRecord::Schema.define(version: 20160223230238) do
     t.text     "textNotes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "wine_id"
+    t.integer  "user_id"
   end
+
+  add_index "infos", ["user_id"], name: "index_infos_on_user_id", using: :btree
+  add_index "infos", ["wine_id"], name: "index_infos_on_wine_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -30,10 +35,7 @@ ActiveRecord::Schema.define(version: 20160223230238) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "email"
-    t.integer  "wine_id"
   end
-
-  add_index "users", ["wine_id"], name: "index_users_on_wine_id", using: :btree
 
   create_table "wines", force: :cascade do |t|
     t.string   "vineyard"
@@ -44,11 +46,8 @@ ActiveRecord::Schema.define(version: 20160223230238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "color"
-    t.integer  "user_id"
   end
 
-  add_index "wines", ["user_id"], name: "index_wines_on_user_id", using: :btree
-
-  add_foreign_key "users", "wines"
-  add_foreign_key "wines", "users"
+  add_foreign_key "infos", "users"
+  add_foreign_key "infos", "wines"
 end

@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
 
 	def index 
-		render :index
+		render layout: "sidebar"
 	end
 
-	def learn
-		render :learn
-	end
+	# def learn
+	# 	render :learn
+	# end
 
 end

@@ -32,38 +32,50 @@ Wine.create([
     year: "1985",
     name: "Some Red Wine",
     color: "Red",
-    notes: " ",
-    link: " "
+    notes: "notes1",
+    link: "link1"
 	},
 	{
     vineyard: "Elke Vineyards",
     year: "1984",
     name: "Some White Wine",
     color: "White",
-    notes: " ",
-    link: " "
+    notes: "notes2",
+    link: "link2"
 	},
 	{
     vineyard: "Navarro",
     year: "2003",
     name: "Some Rose Wine",
     color: "Rose",
-    notes: " ",
-    link: " "
+    notes: "notes3",
+    link: "link3"
 	}
 ])
 
 Info.create([
 	{
 		review: 4,
-		textNotes: "here are some notes"
+		textNotes: "here are some notes",
+        user_id: 1,
+        wine_id: 1
 	},
 	{
 		review: 2,
-		textNotes: "A second pair of notes"
+		textNotes: "A second pair of notes",
+        user_id: 2,
+        wine_id: 2
 	},
 	])
 
 # USERS: (:username, :password, :preferences, :email)
 # WINES: (:vineyard, :year, :name, :color, :notes, :link)
 # INFOS: (:review, :textNotes)
+
+
+
+
+
+
+
+

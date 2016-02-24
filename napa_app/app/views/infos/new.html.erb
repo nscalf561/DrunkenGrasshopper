@@ -1,0 +1,19 @@
+New Info
+
+<%= form_for @info do |f| %>
+  <div>
+  <!-- make this a radio button with stars for dani -->
+    <%= f.text_field :review, placeholder: "Review" %> 
+  </div>
+  <div>
+    <%= f.text_field :textNotes, placeholder: "Notes" %>
+  </div>
+  <div>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+    <div>
+    <%= f.hidden_field :wine_id, :value => current_user.id %>
+  </div>
+  <%= f.submit "Create Info" %>
+
+<% end %> 

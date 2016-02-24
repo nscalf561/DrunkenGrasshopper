@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
 
   def new
     @user = User.new
-    render :new
   end
 
   def create
@@ -15,5 +14,11 @@ class SessionsController < ApplicationController
       redirect_to "/login"
     end
   end
+
+  def logout
+    @user = session[:user_id] = nil
+  end
+
+  
 
 end

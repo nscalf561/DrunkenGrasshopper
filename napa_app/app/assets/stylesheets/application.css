@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+ /*----Nav----*/
+
+#globalNav {
+  position:fixed; // keep fixed to window
+  padding: 0px;
+  top: 0; //position to top
+  left: 0; // position to left of window
+  height:100%; 
+  width:130px; //set dimensions
+}
+
+.scrollbox {
+
+	height: 120px;
+	width:100px;
+	border:1px solid #eee;
+	color:#eee;
+	overflow:auto;
+}
+
+#right {
+	position:relative;
+	margin-left:140px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
