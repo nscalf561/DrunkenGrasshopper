@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
 
   def new
     @user = User.new
+    render layout: "sidebar"
+
   end
 
   def create
@@ -17,6 +19,7 @@ class SessionsController < ApplicationController
 
   def logout
     @user = session[:user_id] = nil
+    redirect_to "/"
   end
 
   

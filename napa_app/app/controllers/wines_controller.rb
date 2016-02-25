@@ -2,6 +2,8 @@ class WinesController < ApplicationController
 
 	def new
 		@wine = Wine.new
+		render layout: "sidebar"
+
 	end
 
 	def create
@@ -20,11 +22,15 @@ class WinesController < ApplicationController
 
 	def index
 		@wines = Wine.all
+		render layout: "sidebar"
+
 	end
 
 	def show
 		@wine = Wine.find(params[:id])
 		@info = Info.new
+		render layout: "sidebar"
+
 	end
 	
 end

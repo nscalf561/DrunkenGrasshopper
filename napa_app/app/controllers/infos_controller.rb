@@ -2,10 +2,13 @@ class InfosController < ApplicationController
 
 	def index
 		@infos = Info.all
+		render layout: "sidebar"
 	end
 
 	def new
 		@info = Info.new
+		render layout: "sidebar"
+
 	end
 
 	def create

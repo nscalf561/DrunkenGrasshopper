@@ -1,24 +1,26 @@
-NEW WINE
+<div id="right">
+  NEW WINE
 
-<%= form_for @wine do |f| %>
-  <div>
-    <%= f.text_field :name, placeholder: "Name" %>
-  </div>
-  <div>
-    <%= f.text_field :vineyard, placeholder: "Vineyard" %>
-  </div>
-  <div>
-    <%= f.text_field :year, placeholder: "Year" %>
-  </div>
-  <div>
-    <%= f.text_field :color, placeholder: "Color" %>
-  </div>
-  <div>
-    <%= f.text_field :notes, placeholder: "Notes" %>
-  </div>
-  <div>
-    <%= f.text_field :link, placeholder: "Link" %>
-  </div>
-  <%= f.submit "Create Wine" %>
+  <%= form_for @wine do |f| %>
+    <div>
+      <%= f.text_field :name, placeholder: "Name" %>
+    </div>
+    <div>
+      <%= f.text_field :vineyard, placeholder: "Vineyard" %>
+    </div>
+    <div>
+      <%= f.text_field :year, placeholder: "Year" %>
+    </div>
+    <div>
+      <%= f.text_field :color, placeholder: "Color" %>
+    </div>
+    <div>
+      <%= f.text_field :notes, placeholder: "Notes" %>
+    </div>
+    <div>
+      <%= f.text_field :link, placeholder: "Link" %>
+    </div>
+    <%= f.submit "Create Wine" %>
 
-<% end %> 
+  <% end %> 
+</div>

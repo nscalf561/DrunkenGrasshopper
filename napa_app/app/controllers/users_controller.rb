@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 	# before_action :require_login
 	def new
 		@user = User.new
+		render layout: "sidebar"
+
 	end
 
 	def create
@@ -17,6 +19,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		render layout: "sidebar"
+
 	end
 
 end
