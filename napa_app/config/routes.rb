@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   #creates a new session for user logins
   post "/sessions", to: "sessions#create"
+  delete "/sessions", to: "sessions#destroy"
 
 end 

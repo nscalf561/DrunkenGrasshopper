@@ -25,6 +25,11 @@
   width:130px; //set dimensions
 }
 
+.navbarList {
+/*	border: 1px solid #eee;
+*/}
+
+
 .scrollbox {
 	height: 120px;
 	width:100px;
