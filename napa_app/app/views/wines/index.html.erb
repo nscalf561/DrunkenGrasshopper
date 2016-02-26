@@ -1,23 +1,49 @@
 <div id="right">
-  <% @wines.each do |wine| %>
-    <div>
-      <h3><%= wine.name %></h3>
+
+  <div>
+    <h1 id="winelistTitle">Wine List</h1>
+  </div>
+
+  <div>
+    <ul id="winelist">
+      <% @wines.each do |wine| %>
+        <li>
+          <div class="wineTraits">
+            <h3><%= wine.name %></h3>
+          </div>
+        </li>
+        <li>
+          <div class="wineTraits">
+           	<h3><%= wine.vineyard %></h3>
+          </div>
+        </li>
+        <li>
+          <div class="wineTraits">
+           	<h3><%= wine.year %></h3>
+          </div>
+        </li>
+        <li>
+          <div class="wineTraits">
+           	<h3><%= wine.color %></h3>
+          </div>
+        </li>
+        <li>
+          <div class="wineTraits">
+           	<h3><%= wine.notes %></h3>
+          </div>
+        </li>
+        <li>
+          <div class="wineTraits">
+           	<h3><%= wine.link %></h3>
+          </div>
+        </li>
+        <li>
+          <div class="wineTraits">
+            <%= link_to "Button", wine_path(wine) %>
+          </div>
+        </li>
+      <br>
+    <% end %>
     </div>
-    <div>
-     	<h3><%= wine.vineyard %></h3>
-    </div>
-    <div>
-     	<h3><%= wine.year %></h3>
-    </div>
-    <div>
-     	<h3><%= wine.color %></h3>
-    </div>
-    <div>
-     	<h3><%= wine.notes %></h3>
-    </div>
-    <div>
-     	<h3><%= wine.link %></h3>
-    </div>
-    <br>
-  <% end %>
+  </ul>
 </div>

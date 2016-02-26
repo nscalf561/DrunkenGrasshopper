@@ -14,39 +14,57 @@
  *= require_self
  */
 
+ /*----Global----*/
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%
+}
+
  /*----Nav----*/
+
+nav#globalNav.navbar.navbar-inverse.navbar-fixed-left {
+ 	height: 100%;
+ 	width: 18%;
+ 	padding-left: 0%;
+ 	padding-right: 0%;
+}
 
 #globalNav {
   position:fixed; // keep fixed to window
-  padding: 0px;
-  top: 0; //position to top
-  left: 0; // position to left of window
-  height:100%; 
-  width:130px; //set dimensions
+  padding: 0%;
+  top: 0%; //position to top
+  left: 0%; // position to left of window
+}
+
+#navbarHolder {
+	maring-left:0;
+	padding-left:0;
 }
 
 .navbarList {
-/*	border: 1px solid #eee;
-*/}
-
+	width:100%;
+	text-align: center;
+}
 
 .scrollbox {
-	height: 120px;
-	width:100px;
-	border:1px solid #eee;
+	width:108%;
+	height: 230px;
+	border:1px solid #9D9D9D;
 	color:#eee;
 	overflow:auto;
-	padding-left:5px;
+	padding-left:5%;
+	margin-right: 0%;
+	padding-right:0%;
 }
 
 #right {
 	position:relative;
-	margin-left:140px;
+	margin-left:18%;
 }
-
-
-
-
 
 
 

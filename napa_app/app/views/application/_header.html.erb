@@ -1,18 +1,17 @@
 <header>
-	<nav id="globalNav" class="navbar navbar-inverse navbar-left navbar-fixed-left">
-		<div class="container-fluid">
+	<nav id="globalNav" class="navbar navbar-inverse navbar-fixed-left">
+		<div id="navbarHolder" class="container-fluid">
 	  	<ul class="nav navbar-nav navbar-right">
 		    <li class="navbarList"><a href="/">Home</a></li>
 		    <li class="navbarList"><a href="/wines">Wine List</a></li>
 		    <li class="navbarList"><a href="/wines/new">Log Wines</a></li>
-		  </ul>
-	  	<ul class="nav navbar-nav navbar-right">
-	  	<% if current_user %>
-	  		<li class="navbarList"><%= link_to "Logout", sessions_path, method: :delete %></li> 
-	  	<% else %>
-			  <li class="navbarList"><a href="/login">Log in</a></li>
-			  <li class="navbarList"><a href="/users/signup">Sign up</a></li>
-			<% end %>
+<!-- 		    <li class="navbarList"><a href="/users/#{current_user.user_id}">Account</a></li>
+ -->	  		<% if current_user %>
+	  			<li class="navbarList"><%= link_to "Logout", sessions_path, method: :delete %></li> 
+	  		<% else %>
+			  	<li class="navbarList"><a href="/login">Log in</a></li>
+			  	<li class="navbarList"><a href="/users/signup">Sign up</a></li>
+				<% end %>
 			</ul>
 			<ul class="scrollbox">
 			  <div>Feed:

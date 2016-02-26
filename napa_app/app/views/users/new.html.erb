@@ -1,19 +1,22 @@
-<div id="right">
-  Sign Up
-
+<div id="right" class="signup">
+  <div id="signupTitle">
+    Sign Up
+  </div>
+  <div class="signup">
   <%= form_for @user do |f| %>
-    <div>
+    <div id="signupName">
       <%= f.text_field :username, placeholder: "Username" %>
     </div>
-    <div>
+    <div id="signupPassword">
       <%= f.password_field :password, placeholder: "Password" %>
     </div>
-      <div>
+      <div id="signupPreferences">
       <%= f.text_field :preferences, placeholder: "Wine Preferences" %>
     </div>
-    <div>
+    <div id="signupEmail">
       <%= f.text_field :email, placeholder: "Email" %>
     </div>
-    <%= f.submit "Sign Up" %>
+    <%= f.submit "Sign Up", class: "btn btn-danger" %>
   <% end %> 
+  </div>
 </div>
