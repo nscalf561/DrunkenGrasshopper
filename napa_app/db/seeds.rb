@@ -7,20 +7,20 @@ Info.destroy_all
 # Let's create a bunch of records
 User.create([
   {
-    username: "makethiswitty",
-    password: "password0",
+    username: "user1",
+    password: "password",
     preferences: "Red",
     email: "makingseeds@gmail.com"
   },
   {
-    username: "thisstillisntwitty",
-    password: "password1",
+    username: "user2",
+    password: "password",
     preferences: "White",
     email: "secondseed@gmail.com"
   },
   {
-    username: "thewitisalie",
-    password: "password2",
+    username: "user3",
+    password: "password",
     preferences: "Rose",
     email: "gmailorbust@gmail.com"
   }

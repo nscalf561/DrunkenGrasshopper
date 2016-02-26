@@ -1,41 +1,44 @@
 <div id="right">  
-  <div>
-    <h3>Wine id: <%= @wine.id %></h3>
-    <h3>Vineyard: <%= @wine.vineyard %></h3>
-    <h3>Name: <%= @wine.name %></h3>
-    <h3>Year: <%= @wine.year %></h3>
-    <h3>Color: <%= @wine.color %></h3>
-    <h3>Notes: <%= @wine.notes %></h3>
-    <h3>Link: <%= @wine.link %></h3>
+  <div class="singleWineTraits">
+    <!-- <h3>Wine id: <%= @wine.id %></h3> -->
+    <div>Vineyard: <%= @wine.vineyard %></div>
+    <div>Name: <%= @wine.name %></div>
+    <div>Year: <%= @wine.year %></div>
+    <div>Color: <%= @wine.color %></div>
+    <div>Notes: <%= @wine.notes %></div>
+    <div><%= @wine.link %></div>
 	</div>
   <br>
 
 
-
-  New Info
-
-  <%= form_for @info do |f| %>
-    <div>
-    <!-- TODO: make this a radio button with stars -->
-      <%= f.text_field :review, placeholder: "Review" %> 
-    </div>
-    <div>
-      <%= f.text_field :textNotes, placeholder: "Notes" %>
-    </div>
-    <div>
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-    </div>
-    <div>
-      <%= f.hidden_field :wine_id, :value => @wine.id %>
-    </div>
-    <%= f.submit "Create Info" %>
-  <% end %> 
-
+  <div class="infoForm">
+    Make a new post
+    <%= form_for @info do |f| %>
+      <div>
+      <!-- TODO: make this a radio button with stars -->
+        <%= f.text_field :review, placeholder: "Review" %> 
+      </div>
+      <div>
+        <%= f.text_field :textNotes, placeholder: "Notes" %>
+      </div>
+      <div>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+      </div>
+      <div>
+        <%= f.hidden_field :wine_id, :value => @wine.id %>
+      </div>
+      <div id="infoSubmitButton">
+      <%= f.submit "Create Info" %>
+      </div>
+      <br>
+    <% end %> 
+  </div>
 
   <div> 
-  	<div>
+  	<div class="submittedInfos">
       <% @wine.infos.each do |info| %>
-      	<%= info.review %>
+      	<%= info.review %> stars
+        <br>
       	<%= info.textNotes %>
         <br>
       <% end %>
