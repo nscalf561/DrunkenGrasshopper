@@ -1,23 +1,26 @@
 <div id="right">
-  NEW WINE
+  <div id="newWineTitle">
+    NEW WINE
+  </div>
 
+  <div class="newWine">
   <%= form_for @wine do |f| %>
-    <div>
+    <div id="newWineName">
       <%= f.text_field :name, placeholder: "Name" %>
     </div>
-    <div>
+    <div id="newWineVineyard">
       <%= f.text_field :vineyard, placeholder: "Vineyard" %>
     </div>
-    <div>
+    <div id="newWineYear">
       <%= f.text_field :year, placeholder: "Year" %>
     </div>
-    <div>
+    <div id="newWineColor">
       <%= f.text_field :color, placeholder: "Color" %>
     </div>
-    <div>
+    <div id="newWineNotes">
       <%= f.text_field :notes, placeholder: "Notes" %>
     </div>
-    <div>
+    <div id="newWineLink">
       <%= f.text_field :link, placeholder: "Link" %>
     </div>
 <!--     <div>
@@ -32,7 +35,7 @@
     <div>
       <%= f.hidden_field :wine_id, :value => nil %>
     </div> -->
-    <%= f.submit "Create Wine" %>
+    <%= f.submit "Create Wine", class: "btn btn-danger" %>
 
   <% end %> 
 </div>

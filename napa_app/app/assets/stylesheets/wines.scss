@@ -18,4 +18,18 @@
 #winelist {
 	list-style-type: none;
 	overflow:auto;
+	font-family: 'Megrim', cursive;
+}
+
+#newWineTitle {
+	font-family: 'Megrim', cursive;
+	margin-top: 8%;
+	font-size: 60px;
+	text-align: center;
+	color:#eee;
+}
+
+.newWine {
+	text-align: center;
+	color: #eee;
 }

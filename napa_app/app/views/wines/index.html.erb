@@ -9,27 +9,27 @@
       <% @wines.each do |wine| %>
         <li>
           <div class="wineTraits">
-            <h3><%= wine.name %></h3>
+            <h3>Name: <%= wine.name %></h3>
           </div>
         </li>
         <li>
           <div class="wineTraits">
-           	<h3><%= wine.vineyard %></h3>
+           	<h3>Vineyard: <%= wine.vineyard %></h3>
           </div>
         </li>
         <li>
           <div class="wineTraits">
-           	<h3><%= wine.year %></h3>
+           	<h3>Year: <%= wine.year %></h3>
           </div>
         </li>
         <li>
           <div class="wineTraits">
-           	<h3><%= wine.color %></h3>
+           	<h3>Type: <%= wine.color %></h3>
           </div>
         </li>
         <li>
           <div class="wineTraits">
-           	<h3><%= wine.notes %></h3>
+           	<h3>Notes: <%= wine.notes %></h3>
           </div>
         </li>
         <li>
@@ -39,7 +39,7 @@
         </li>
         <li>
           <div class="wineTraits">
-            <%= link_to "Button", wine_path(wine) %>
+            <%= link_to "Link", wine_path(wine) %>
           </div>
         </li>
       <br>

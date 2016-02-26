@@ -50,6 +50,10 @@ nav#globalNav.navbar.navbar-inverse.navbar-fixed-left {
 	text-align: center;
 }
 
+#titanic {
+	float: none;
+}
+
 .scrollbox {
 	width:108%;
 	height: 230px;

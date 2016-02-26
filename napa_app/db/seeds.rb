@@ -28,28 +28,28 @@ User.create([
 
 Wine.create([
 	{
-    vineyard: "Breggo",
+    vineyard: "Opus One",
     year: "1985",
-    name: "Some Red Wine",
+    name: "Bordeaux Blend",
     color: "Red",
-    notes: "notes1",
-    link: "link1"
+    notes: "",
+    link: "http://www.opusonewinery.com/"
 	},
 	{
-    vineyard: "Elke Vineyards",
+    vineyard: "Screaming Eagle",
     year: "1984",
-    name: "Some White Wine",
-    color: "White",
-    notes: "notes2",
-    link: "link2"
+    name: "Cabernet Sauvignon",
+    color: "Red",
+    notes: "",
+    link: "http://www.screamingeagle.com/"
 	},
 	{
-    vineyard: "Navarro",
+    vineyard: "Caymus Vineyards",
     year: "2003",
-    name: "Some Rose Wine",
-    color: "Rose",
-    notes: "notes3",
-    link: "link3"
+    name: "Cabernet Sauvignon",
+    color: "Red",
+    notes: "",
+    link: "http://www.caymus.com/"
 	}
 ])
 
