@@ -3,6 +3,8 @@
 # Description
 Drunk grasshopper is a site for want to be wine enthusiasts.  In practice, it works a lot like a small scale wine log to keep notes on what you drink as you explore new wines.  As the project builds out, it will become more clear that there is a focus on Napa Valley Wines.  
 
+http://grasshopper-wine-app.herokuapp.com/
+
 # Technologies Used
 Technologies used include HTML5/CSS3, jQuery, Sass-Rails 5.0, Ruby 2.2.0, Rails 4.2.5.1, Paperclip 4.3.5 and PostgreSQL 9.5.0. 
 
