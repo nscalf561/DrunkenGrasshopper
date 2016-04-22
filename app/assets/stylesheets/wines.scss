@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 .wineTraits {
-	color:white;
+	color:black;
 	text-align: center;
 }
 
@@ -15,11 +15,11 @@
 	color:#eee;
 }
 
-#winelist {
-	list-style-type: none;
-	overflow:auto;
-	font-family: 'Megrim', cursive;
-}
+// #winelist li{
+// 	list-style-type: none;
+// 	overflow:auto;
+// 	font-family: 'Megrim', cursive;
+// }
 
 #newWineTitle {
 	font-family: 'Megrim', cursive;
@@ -57,6 +57,40 @@
 	color:#fff;
 	font-size:30px;
 }
+
+#right {
+	margin-left: 18%;
+}
+
+.card {
+	max-height: 316px;
+	max-width: 40%;
+	float:left;
+	list-style-type: none;	
+  background:#FFF;
+  border:1px solid #AAA;
+  border-bottom:3px solid #7f8c8d;
+  padding:0px;
+  margin:15px;
+  overflow:hidden;
+	font-family: 'Megrim', cursive;
+}
+
+div .card {
+	background-color: #95a5a6;
+}
+
+.card p {
+  margin:0px;
+  padding:10px;
+}
+
+.float-left .card {
+  float:left;
+  width: 300px;  
+  height:270px;
+}
+
 
 
 

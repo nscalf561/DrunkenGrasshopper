@@ -5,45 +5,49 @@
   </div>
 
   <div>
-    <ul id="winelist">
-      <% @wines.each do |wine| %>
-        <li>
-          <div class="wineTraits">
-            <h3>Name: <%= wine.name %></h3>
+    <div class="content">
+      <ul id="winelist">
+        <% @wines.each do |wine| %>
+
+          <div class="card">
+            <div class="banner">
+            </div>
+              <li>
+                <div class="wineTraits">
+                  <h3>Name: <%= wine.name %></h3>
+                </div>
+              </li>
+              <li>
+                <div class="wineTraits">
+                  <h3>Vineyard: <%= wine.vineyard %></h3>
+                </div>
+              </li>
+              <li>
+                <div class="wineTraits">
+                  <h3>Year: <%= wine.year %></h3>
+                </div>
+              </li>
+              <li>
+                <div class="wineTraits">
+                  <h3>Type: <%= wine.color %></h3>
+                </div>
+              </li>
+              <li>
+                <div class="wineTraits">
+                  <h3>Notes: <%= wine.notes %></h3>
+                </div>
+              </li>
+
+              <li>
+                <div class="wineTraits">
+                  <%= link_to "Link", wine_path(wine) %>
+                </div>
+              </li>
+           </div>
+            <% end %>
+           </ul>
           </div>
-        </li>
-        <li>
-          <div class="wineTraits">
-           	<h3>Vineyard: <%= wine.vineyard %></h3>
-          </div>
-        </li>
-        <li>
-          <div class="wineTraits">
-           	<h3>Year: <%= wine.year %></h3>
-          </div>
-        </li>
-        <li>
-          <div class="wineTraits">
-           	<h3>Type: <%= wine.color %></h3>
-          </div>
-        </li>
-        <li>
-          <div class="wineTraits">
-           	<h3>Notes: <%= wine.notes %></h3>
-          </div>
-        </li>
-        <li>
-          <div class="wineTraits">
-           	<h3><%= wine.link %></h3>
-          </div>
-        </li>
-        <li>
-          <div class="wineTraits">
-            <%= link_to "Link", wine_path(wine) %>
-          </div>
-        </li>
-      <br>
-    <% end %>
-    </div>
-  </ul>
+      </div>
+
+
 </div>

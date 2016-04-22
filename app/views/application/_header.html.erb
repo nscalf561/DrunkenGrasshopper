@@ -1,27 +1,32 @@
 <header>
-	<nav id="globalNav" class="navbar navbar-inverse navbar-fixed-left">
-		<div id="navbarHolder" class="container-fluid">
-	  	<ul class="nav navbar-nav navbar-right">
-		    <li class="navbarList"><a href="/">Home</a></li>
-		    <li class="navbarList"><a href="/wines">Wine List</a></li>
-		    <li class="navbarList"><a href="/wines/new">Log Wines</a></li>
-<!-- 		    <li class="navbarList"><a href="/users/#{current_user.user_id}">Account</a></li>
- -->	  		<% if current_user %>
-	  			<li class="navbarList"><%= link_to "Logout", sessions_path, method: :delete %></li> 
-	  		<% else %>
-			  	<li class="navbarList"><a href="/login">Log in</a></li>
-			  	<li class="navbarList"><a href="/users/signup">Sign up</a></li>
-				<% end %>
-			</ul>
-			<ul class="scrollbox">
-			  <div>Feed:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus orci tincidunt, dignissim odio a, dictum lacus. Nam eget erat posuere erat malesuada iaculis quis lobortis odio. Cras non ex dui. Phasellus id convallis purus. Vivamus aliquam leo at sapien fringilla, eu volutpat lacus interdum. Morbi vestibulum consectetur dolor, vitae convallis tellus vulputate non. Phasellus dictum luctus ligula. Mauris laoreet faucibus lorem non vulputate. Suspendisse eu fermentum justo. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-			  </div> </ul>
-			  <ul class="scrollbox">
-			  <div>Recents:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus orci tincidunt, dignissim odio a, dictum lacus. Nam eget erat posuere erat malesuada iaculis quis lobortis odio. Cras non ex dui. Phasellus id convallis purus. Vivamus aliquam leo at sapien fringilla, eu volutpat lacus interdum. Morbi vestibulum consectetur dolor, vitae convallis tellus vulputate non. Phasellus dictum luctus ligula. Mauris laoreet faucibus lorem non vulputate. Suspendisse eu fermentum justo. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-			  </div> </ul>
-	  	</ul>
-		</div>
-	</nav>
+
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="/" id="siteNameSidebar">
+          Drunk Grasshopper
+        </a>
+      </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/wines">Wine List</a>
+      </li>
+      <li>
+        <a href="/wines/new">Log Wines</a>
+      </li>
+			<% if current_user %>
+				<li class="navbarList"><%= link_to "Logout", sessions_path, method: :delete %></li> 
+			<% else %>
+				<li>
+					<a href="/login">Log in</a>
+				</li>
+				<li>
+					<a href="/users/signup">Sign up</a>
+				</li>
+			<% end %>
+    </ul>
+  </div>
+
 </header>
