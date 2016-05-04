@@ -60460,3 +60460,475 @@ Processing by PagesController#index as HTML
   Rendered pages/index.html.erb within layouts/sidebar (0.1ms)
   Rendered application/_header.html.erb (0.0ms)
 Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 16:09:24 -0700
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/nicholasscalf/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/nicholasscalf/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/nicholasscalf/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nicholasscalf/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nicholasscalf/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.1ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.1ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nicholasscalf/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 16:09:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/sidebar (0.4ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 306ms (Views: 294.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/infos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/pages.self-067b15cfde1ddb9f8c1792cc26cf26cb15eea1922c154b8f56cf7b062fa29870.css?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/sessions.self-357a1e04926fe343b069b647363360fec0daa75cd90ecc5aed9491b42eed1ad8.css?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/users.self-b681d7640e63ec72ce6f437352704e319aaf565caa03825404076a8c846318f7.css?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/wines.self-d7fd64a42da140535011714c18d277598bb56bbba3517ac3a7d11e9b98cb071a.css?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/application.self-2f9bb7c53003ef7e3dac955dde9c073b71e5168a25d473874383c50817400f89.css?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/infos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 16:09:40 -0700
+
+
+Started GET "/assets/wineGlass.jpeg" for ::1 at 2016-05-04 16:09:41 -0700
+
+
+Started GET "/" for ::1 at 2016-05-04 16:12:54 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/sidebar (0.0ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-067b15cfde1ddb9f8c1792cc26cf26cb15eea1922c154b8f56cf7b062fa29870.css?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/sessions.self-357a1e04926fe343b069b647363360fec0daa75cd90ecc5aed9491b42eed1ad8.css?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/wines.self-d7fd64a42da140535011714c18d277598bb56bbba3517ac3a7d11e9b98cb071a.css?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/users.self-b681d7640e63ec72ce6f437352704e319aaf565caa03825404076a8c846318f7.css?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/infos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/application.self-236e760076963b7e131a4d309b3ea44cf64e67987c1b4ab0e314299bda521332.css?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/infos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/assets/wineGlass.jpeg" for ::1 at 2016-05-04 16:12:55 -0700
+
+
+Started GET "/" for ::1 at 2016-05-04 16:13:21 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/sidebar (0.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 130.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/infos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/pages.self-18710452c9788ca187f0e25c2ac8cb4589996702ef009845d89bb9537876211f.css?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/sessions.self-63092bd64309a5647c3379a9e50e13e5e07450c882ca25b8b129d4d2396fef1c.css?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/users.self-6c0fd1d8868ccdb1405b36339583706bd7dd7f3a1971c4f5002291d8aedfd179.css?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/wines.self-e718d79f45f561bb7e21f7ad1a2023d48cb8904f4c0879fa552ccbbed2590c32.css?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/application.self-236e760076963b7e131a4d309b3ea44cf64e67987c1b4ab0e314299bda521332.css?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/infos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/assets/wineGlass.jpeg" for ::1 at 2016-05-04 16:13:22 -0700
+
+
+Started GET "/" for ::1 at 2016-05-04 16:13:24 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/sidebar (0.3ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for ::1 at 2016-05-04 16:13:25 -0700
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (5.8ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/sidebar (34.2ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 53.9ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/wines/new" for ::1 at 2016-05-04 16:13:30 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/new.html.erb within layouts/sidebar (19.9ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines/new" for ::1 at 2016-05-04 16:15:43 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/new.html.erb within layouts/sidebar (2.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-18710452c9788ca187f0e25c2ac8cb4589996702ef009845d89bb9537876211f.css?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/sessions.self-63092bd64309a5647c3379a9e50e13e5e07450c882ca25b8b129d4d2396fef1c.css?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/users.self-6c0fd1d8868ccdb1405b36339583706bd7dd7f3a1971c4f5002291d8aedfd179.css?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/infos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/wines.self-b06e9d01b4d03711d6d545ed1076d5c70b8d900688d88e5f446825ab0486b26a.css?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/application.self-236e760076963b7e131a4d309b3ea44cf64e67987c1b4ab0e314299bda521332.css?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/infos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 16:15:43 -0700
+
+
+Started GET "/wines/new" for ::1 at 2016-05-04 16:15:54 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/new.html.erb within layouts/sidebar (2.3ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/infos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/pages.self-18710452c9788ca187f0e25c2ac8cb4589996702ef009845d89bb9537876211f.css?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/sessions.self-63092bd64309a5647c3379a9e50e13e5e07450c882ca25b8b129d4d2396fef1c.css?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/users.self-6c0fd1d8868ccdb1405b36339583706bd7dd7f3a1971c4f5002291d8aedfd179.css?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/wines.self-b06e9d01b4d03711d6d545ed1076d5c70b8d900688d88e5f446825ab0486b26a.css?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/application.self-ae8ab81dabdbeb6cf2d40f80756fe96e9d9b477ecee3210aa6caca1b694a1ed8.css?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/infos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 16:15:54 -0700
+
+
+Started GET "/wines/new" for ::1 at 2016-05-04 16:16:34 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/new.html.erb within layouts/sidebar (1.3ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 148ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/infos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/pages.self-d9052f0b727c44629487b5ad6ef90fe0c44351a3c72fe62298df21fa286c2039.css?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/sessions.self-1de2b736d04e138e4a4dd3518d557fa5066d1932b9bbd3009f98254ddbbfb97d.css?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/users.self-7f9ceeeeabd676847fdc4146ab0701c4b403a1568005e7b2901f176520277dc1.css?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/wines.self-a86f63b2fd9db4c87549ec010f8d8d9c32e1e6e9de30cbb57d613292c79a5691.css?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/application.self-ae8ab81dabdbeb6cf2d40f80756fe96e9d9b477ecee3210aa6caca1b694a1ed8.css?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/infos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/assets/wineGlass.jpeg" for ::1 at 2016-05-04 16:16:34 -0700
+
+
+Started GET "/" for ::1 at 2016-05-04 16:17:10 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/sidebar (0.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-05-04 16:53:50 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/sidebar (5.7ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 100.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/login" for ::1 at 2016-05-04 16:53:51 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/sidebar (0.9ms)
+  Rendered application/_header.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines/new" for ::1 at 2016-05-04 16:53:52 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/new.html.erb within layouts/sidebar (2.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for ::1 at 2016-05-04 16:53:53 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/sidebar (1.6ms)
+  Rendered application/_header.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines/new" for ::1 at 2016-05-04 16:53:54 -0700
+Processing by WinesController#new as HTML
+  Rendered wines/new.html.erb within layouts/sidebar (1.3ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for ::1 at 2016-05-04 16:53:54 -0700
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT "wines".* FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/sidebar (2.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.4ms)
